@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhupratim Roy - Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0d1117;
+            color: #c9d1d9;
+            scroll-behavior: smooth;
+        }
+        .section-title {
+            position: relative;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #58a6ff;
+            margin-bottom: 2rem;
+            display: inline-block;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -8px;
+            width: 70%;
+            height: 4px;
+            background-color: #58a6ff;
+            border-radius: 9999px;
+        }
+        .card {
+            background-color: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-[#161b22] bg-opacity-90 backdrop-blur-md border-b border-[#30363d] p-4">
+        <div class="container mx-auto flex justify-between items-center px-4 md:px-0">
+            <a href="#hero" class="text-xl font-bold text-white">Bhupratim Roy</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="#about" class="text-[#c9d1d9] hover:text-[#58a6ff] transition-colors">About</a>
+                <a href="#skills" class="text-[#c9d1d9] hover:text-[#58a6ff] transition-colors">Skills</a>
+                <a href="#education" class="text-[#c9d1d9] hover:text-[#58a6ff] transition-colors">Education</a>
+                <a href="#experience" class="text-[#c9d1d9] hover:text-[#58a6ff] transition-colors">Experience</a>
+                <a href="#contact" class="text-[#c9d1d9] hover:text-[#58a6ff] transition-colors">Contact</a>
+            </div>
+            <button id="menu-button" class="md:hidden text-[#c9d1d9] text-2xl">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 right-0 bg-[#161b22] border-t border-[#30363d] flex flex-col items-center py-4 space-y-4">
+            <a href="#about" class="text-[#c9d1d9] hover:text-[#58a6ff] transition-colors w-full text-center">About</a>
+            <a href="#skills" class="text-[#c9d1d9] hover:text-[#58a6ff] transition-colors w-full text-center">Skills</a>
+            <a href="#education" class="text-[#c9d1d9] hover:text-[#58a6ff] transition-colors w-full text-center">Education</a>
+            <a href="#experience" class="text-[#c9d1d9] hover:text-[#58a6ff] transition-colors w-full text-center">Experience</a>
+            <a href="#contact" class="text-[#c9d1d9] hover:text-[#58a6ff] transition-colors w-full text-center">Contact</a>
+        </div>
+    </nav>
+
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section id="hero" class="container mx-auto px-6 py-20 min-h-screen flex items-center justify-center">
+            <div class="flex flex-col md:flex-row items-center justify-center md:justify-between gap-12 max-w-5xl">
+                <div class="flex-shrink-0">
+                    <img src="https://i.ibb.co.com/gbmsRTHD/Photograph.jpg" alt="Bhupratim Roy's Profile Picture" class="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover border-4 border-[#30363d] shadow-lg">
+                </div>
+                <div class="text-center md:text-left">
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight">
+                        Hello, I'm <span class="text-[#58a6ff]">Bhupratim Roy</span>
+                    </h1>
+                    <p class="mt-4 text-xl sm:text-2xl text-[#8b949e]">
+                        A Chemical Engineering graduate from BUET.
+                    </p>
+                    <div class="mt-8 flex justify-center md:justify-start gap-4">
+                        <a href="https://www.linkedin.com/in/bhupratim-roy/" target="_blank" class="text-white hover:text-[#58a6ff] transition-colors text-3xl">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:roybhupratim3.1416@gmail.com" class="text-white hover:text-[#58a6ff] transition-colors text-3xl">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="#contact" class="text-white hover:text-[#58a6ff] transition-colors text-3xl">
+                            <i class="fas fa-phone"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="container mx-auto px-6 py-20">
+            <h2 class="section-title">About Me</h2>
+            <div class="card max-w-3xl">
+                <p class="text-[#8b949e] leading-relaxed">
+                    Enthusiastic Chemical Engineering graduate seeking an entry-level position to apply my skills, grow professionally, and contribute to organizational success. Self-motivated, reliable, and adaptable, with the ability to work effectively in teams or independently under pressure.
+                </p>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="container mx-auto px-6 py-20">
+            <h2 class="section-title">Skills</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Skill Card -->
+                <div class="card flex items-center gap-4">
+                    <i class="fas fa-file-excel text-[#217346] text-3xl"></i>
+                    <span class="text-lg font-semibold">Microsoft Excel</span>
+                </div>
+                <!-- Skill Card -->
+                <div class="card flex items-center gap-4">
+                    <i class="fas fa-file-powerpoint text-[#D24726] text-3xl"></i>
+                    <span class="text-lg font-semibold">Microsoft PowerPoint</span>
+                </div>
+                <!-- Skill Card -->
+                <div class="card flex items-center gap-4">
+                    <i class="fas fa-file-word text-[#2B579A] text-3xl"></i>
+                    <span class="text-lg font-semibold">Microsoft Word</span>
+                </div>
+                <!-- Skill Card -->
+                <div class="card flex items-center gap-4">
+                    <i class="fas fa-comments text-[#0078D4] text-3xl"></i>
+                    <span class="text-lg font-semibold">Communication Skill</span>
+                </div>
+                
+                
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="container mx-auto px-6 py-20">
+            <h2 class="section-title">Education</h2>
+            <div class="card space-y-8">
+                <!-- BUET -->
+                <div class="flex flex-col sm:flex-row sm:items-center gap-4">
+                    <div class="flex-shrink-0">
+                        <i class="fas fa-graduation-cap text-[#58a6ff] text-5xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-semibold text-white">Bachelor of Engineering (Chemical Engineering)</h3>
+                        <p class="text-[#8b949e]">Bangladesh University of Engineering and Technology</p>
+                        <p class="text-sm text-[#8b949e]">Passed: 2024 | CGPA: 3.25 (out of 4)</p>
+                    </div>
+                </div>
+                <!-- HSC -->
+                <div class="flex flex-col sm:flex-row sm:items-center gap-4">
+                    <div class="flex-shrink-0">
+                        <i class="fas fa-school text-[#58a6ff] text-5xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-semibold text-white">Higher Secondary Certificate (Science)</h3>
+                        <p class="text-[#8b949e]">Thakurgaon Government College</p>
+                        <p class="text-sm text-[#8b949e]">Passed: 2018 | CGPA: 4.92 (out of 5)</p>
+                    </div>
+                </div>
+                <!-- SSC -->
+                <div class="flex flex-col sm:flex-row sm:items-center gap-4">
+                    <div class="flex-shrink-0">
+                        <i class="fas fa-school text-[#58a6ff] text-5xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-semibold text-white">Secondary School Certificate (Science)</h3>
+                        <p class="text-[#8b949e]">Thakurgaon Government Boys High School</p>
+                        <p class="text-sm text-[#8b949e]">Passed: 2016 | CGPA: 5.00 (out of 5)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="container mx-auto px-6 py-20">
+            <h2 class="section-title">Experience</h2>
+            <div class="card space-y-4">
+                <h3 class="text-2xl font-semibold text-white">Internship Trainee</h3>
+                <p class="text-[#8b949e]">Eastern Refinery Limited</p>
+                <p class="text-sm text-[#8b949e]">May 5, 2023 - May 18, 2023</p>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="container mx-auto px-6 py-20">
+            <h2 class="section-title">Contact</h2>
+            <div class="card max-w-2xl mx-auto">
+                <p class="text-[#8b949e] mb-4">You can reach me via the following channels:</p>
+                <div class="space-y-4 text-center">
+                    <div class="flex items-center gap-4 justify-center">
+                        <i class="fas fa-envelope text-[#58a6ff] text-2xl"></i>
+                        <span class="text-lg"><a href="mailto:roybhupratim3.1416@gmail.com" class="hover:underline">roybhupratim3.1416@gmail.com</a></span>
+                    </div>
+                    <div class="flex items-center gap-4 justify-center">
+                        <i class="fas fa-phone text-[#58a6ff] text-2xl"></i>
+                        <span class="text-lg">01701922140</span>
+                    </div>
+                    <div class="flex items-center gap-4 justify-center">
+                        <i class="fab fa-linkedin text-[#58a6ff] text-2xl"></i>
+                        <span class="text-lg"><a href="https://www.linkedin.com/in/bhupratim-roy/" target="_blank" class="hover:underline">Bhupratim Roy</a></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#161b22] text-[#8b949e] text-center p-6 mt-12 border-t border-[#30363d]">
+        <p>&copy; 2024 Bhupratim Roy. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu and Smooth Scroll -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuButton = document.getElementById('menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const navLinks = document.querySelectorAll('#mobile-menu a, .hidden.md\\:flex a');
+
+            menuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Smooth scrolling for all navigation links
+            navLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    if (link.getAttribute('href').startsWith('#')) {
+                        e.preventDefault();
+                        const targetId = link.getAttribute('href').substring(1);
+                        const targetElement = document.getElementById(targetId);
+                        if (targetElement) {
+                            window.scrollTo({
+                                top: targetElement.offsetTop - 80, // Offset for fixed navbar
+                                behavior: 'smooth'
+                            });
+                        }
+                        // Close mobile menu after clicking a link
+                        if (!mobileMenu.classList.contains('hidden')) {
+                            mobileMenu.classList.add('hidden');
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
